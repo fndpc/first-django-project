@@ -1,0 +1,149 @@
+body {
+    background-color: #f0f8ff; /* Светлый фон */
+    font-family: Arial, sans-serif; /* Удобочитаемый шрифт */
+    margin: 0; /* Убираем отступы по умолчанию */
+}
+
+aside {
+    float: left;
+    width: 25%; /* Ширина бокового меню */
+    padding: 2.5%;
+    height: 100vh; 
+    background-color: #ffffff; /* Белый фон для бокового меню */
+    color: #333; /* Темный текст */
+    border-right: 2px solid rgba(171, 171, 171, 0.5); /* Полупрозрачная граница */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Небольшая тень для отделения */
+}
+
+aside img {
+    width: 80px; /* Ширина логотипа */
+    margin-bottom: 20px; /* Отступ снизу */
+}
+
+aside .logo {
+    font-size: 36px; /* Размер логотипа */
+    margin-left: 10px; /* Отступ слева */
+    font-weight: bold; /* Жирный шрифт */
+    color: #115400; /* Цвет логотипа */
+}
+
+aside h3 {
+    font-size: 24px; /* Размер заголовка навигации */
+    margin-top: 20px; /* Отступ сверху */
+}
+
+aside ul {
+    list-style: none; /* Убираем маркеры списка */
+    padding: 0; /* Убираем внутренний отступ */
+}
+
+aside ul a {
+    text-decoration: none; /* Убираем подчеркивание у ссылок */
+    color: #333; /* Цвет текста */
+    display: block; /* Делаем ссылки блочными элементами */
+    padding: 10px 15px; /* Поля вокруг ссылок */
+    border-radius: 5px; /* Закругленные углы */
+    transition: background 0.3s; /* Плавный переход фона */
+}
+
+aside ul a:hover {
+    background-color: #d1e7dd; /* Цвет фона при наведении */
+    color: #115400; /* Цвет текста при наведении */
+}
+
+main {
+    margin-left: 26%; /* Отступ для основного содержимого, чтобы избежать перекрытия */
+    padding: 2.5%; /* Поля вокруг основного содержимого */
+}
+
+.water {
+    background-color: #e0f7fa; /* Светло-синий цвет для воды */
+    border: 2px solid #0097a7; /* Темно-синий бордер */
+    padding: 20px; /* Отступы */
+    border-radius: 8px; /* Закругленные углы */
+    color: #004d40; /* Темно-зеленый цвет текста */
+    font-family: Arial, sans-serif; /* Шрифт */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Лёгкая тень для эффекта */
+}
+
+.forest {
+    background-color: #f1f8e9; /* Светло-зеленый цвет для леса */
+    border: 2px solid #388e3c; /* Темно-зеленый бордер */
+    padding: 20px; /* Отступы */
+    border-radius: 8px; /* Закругленные углы */
+    color: #2e7d32; /* Темно-зеленый цвет текста */
+    font-family: Arial, sans-serif; /* Шрифт */
+}
+
+.desert {
+    background-color: #ffecb3; /* Светло-желтый цвет для пустыни */
+    border: 2px solid #f57f17; /* Темно-оранжевый бордер */
+    padding: 20px; /* Отступы */
+    border-radius: 8px; /* Закругленные углы */
+    color: #bf360c; /* Темно-красно-коричневый цвет текста */
+    font-family: Arial, sans-serif; /* Шрифт */
+}
+
+.img_forests, .img_deserts, .img_water {
+    display: flex; /* Используем flexbox для красивого расположения изображений */
+    justify-content: space-around; /* Равномерное распределение пространства между изображениями */
+    margin-top: 20px; /* Отступ сверху */
+}
+
+.img_forests img, .img_deserts img, .img_water img {
+    max-width: 30%; /* Ограничиваем ширину изображений до 30% контейнера */
+    border-radius: 8px; /* Закругленные углы изображений */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Тень для изображения */
+    transition: transform 0.3s; /* Анимация при наведении */
+}
+
+.img_forests img:hover, .img_deserts img:hover, .img_water img:hover {
+    transform: scale(1.05); /* Увеличение изображения при наведении */
+}
+
+@media (max-width: 768px) {
+    .img_forests, .img_deserts, .img_water {
+        flex-direction: column; /* На мобильных устройствах располагаем изображения в столбик */
+        align-items: center; /* Центровка изображений */
+    }
+    
+    .img_forests img, .img_deserts img, .img_water img {
+        max-width: 90%; /* Увеличиваем ширину изображений на мобильных устройствах */
+        margin-bottom: 10px; /* Отступ между изображениями */
+    }
+}
+/* Стили для основного содержимого страницы новостей */
+main {
+    padding: 20px; /*Поле вокруг основного содержимого */
+    background-color: #ffffff; /* Белый фон основного содержимого */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Легкая тень для основного блока */
+}
+
+.alert {
+    background-color: #e7f3fe; /* Светло-синий фон для уведомления */
+    border-left: 5px solid #2196F3; /* Синяя граница слева */
+    margin: 10px 0; /* Отступы сверху и снизу */
+    padding: 15px; /* Внутренний отступ */
+    border-radius: 5px; /* Закругленные углы */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Легкая тень */
+}
+
+.alert h3 {
+    margin: 0 0 10px; /* Отступ снизу для заголовка */
+    font-size: 20px; /* Размер шрифта для заголовка */
+    color: #0D47A1; /* Темно-синий цвет для заголовка */
+}
+
+.alert p {
+    margin: 0; /* Убираем отступы */
+    font-size: 16px; /* Размер шрифта для текста */
+    color: #333; /* Цвет текста */
+}
+
+/* Стиль для заголовка страницы */
+main h2 {
+    font-size: 28px; /* Размер заголовка для основного содержимого */
+    color: #115400; /* Цвет заголовка */
+    margin-bottom: 20px; /* Отступ снизу */
+}
+

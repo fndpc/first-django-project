@@ -1,0 +1,15 @@
+{% extends 'main/index.html' %}
+{% load static %}
+
+{% block title %}Добавление новости{% endblock %}
+
+{% block body %}
+<div class="futures">
+    <h1>Форма по добавлению статьи</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form }} <br>
+        <button class = "btn btn-success" type="submit">Добавить статью</button>
+    </form>
+</div>
+{% endblock %}
