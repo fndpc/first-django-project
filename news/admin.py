@@ -1,6 +1,11 @@
 from django.contrib import admin
 from . models import News
 
-admin.site.register(News)
 
-# Register your models here.
+class NewsAdmin(admin.ModelAdmin):
+    fieldsets = [
+            (None, {"fields": ["url"]}),
+            ("Тексты", {"fields": ["title", "full_text"]}),
+]
+    
+admin.site.register(News, NewsAdmin)
